@@ -1,0 +1,29 @@
+{
+  "name": "bark-eology",
+  "version": "1.0.0",
+  "description": "A borking interface for our furreal friends.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YY-Huang/bark-eology.git"
+  },
+  "keywords": [
+    "woof"
+  ],
+  "author": "YYH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YY-Huang/bark-eology/issues"
+  },
+  "homepage": "https://github.com/YY-Huang/bark-eology#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "nodemon": "^1.18.3",
+    "path": "^0.12.7"
+  }
+}
