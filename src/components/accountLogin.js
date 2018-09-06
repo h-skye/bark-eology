@@ -36,7 +36,6 @@ class accountLogin extends React.Component {
             <form id="accountLogin" onSubmit={loginInfo}>
                 <input type="text" name="username" class="username" placeholder="Username" />
                 <input type="text" name="password" class="password" placeholder="Password" />
-                {/* <input type="text" name="dogBreed" class="dogBreed" placeholder="Dog Breed" /> */}
                 <br />
                 <button className="login">Login</button>
                 <button className="signup" onClick={() => this.redirectSignUp()}> New User? </button>

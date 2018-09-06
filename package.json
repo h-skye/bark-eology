@@ -29,6 +29,7 @@
     "express": "^4.16.3",
     "fs": "0.0.1-security",
     "nodemon": "^1.18.3",
+    "pg": "^7.4.3",
     "react-router-dom": "^4.3.1"
   },
   "devDependencies": {

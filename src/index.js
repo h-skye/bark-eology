@@ -28,19 +28,6 @@ class App extends React.Component {
 
     render () {
 
-        // const ownerInfo = (e) => {
-        //     e.preventDefault();
-        //     console.log('my event is ', e)
-    
-        //     const username = e.target.elements.username.value
-        //     const password = e.target.elements.password.value
-        //     // const dogBreed = e.target.elements.dogBreed.value
-    
-        //     console.log('what is my username', username)
-        //     console.log('what is my password', password)
-        //     // console.log('what is my dogBreed', dogBreed);
-        // } 
-
         return (
             
             <Router>

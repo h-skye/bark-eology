@@ -6,3 +6,7 @@ const client = new Client({
 	password: 'subwoofer',
 	port: 5432
 });
+
+client.connect();
+
+module.exports = client;

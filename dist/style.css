@@ -5,11 +5,8 @@
   text-align: center;
   border: 1px solid #333;
   box-shadow: 8px 8px 5px #444;
-  /* padding: 8px 12px; */
-  /* background-image: linear-gradient(to right,#ff6e7f, #bfe9ff); */
   margin-top: 10em;
   margin-bottom: 10em; 
-  /* margin-right: 200px; */
   margin-left: 10em;
 }
 
@@ -22,26 +19,10 @@
 }
 
 #accountLogin .signup, .login {
-  /* border: 1px solid #333; */
   width: 6em;
   height: 2em;
   font-size: 1em;
 }
-
-/* #accountLogin .password{
-  margin-top: 1em;
-  margin-bottom: 1em;
-  border: 1px solid #333;
-}
-
-#accountLogin .signup .login{
-  margin-top: 1em;
-  margin-bottom: 1em;
-  border: 1px solid #333;
-} */
-
-
-
 
 html,
   body {
