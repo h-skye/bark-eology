@@ -1,7 +1,7 @@
 #accountLogin {
   color: rgb(31, 197, 238);
   width: 30em;
-  height: 5em;
+  height: 10em;
   text-align: center;
   border: 1px solid #333;
   box-shadow: 8px 8px 5px #444;
@@ -13,17 +13,33 @@
   margin-left: 10em;
 }
 
-#accountLogin .username {
+#accountLogin .username, .password {
+  margin-top: 3em;
+  border: 1px solid #333;
+  width: 14em;
+  height: 2em;
+  font-size: 1em;
+}
+
+#accountLogin .signup, .login {
+  /* border: 1px solid #333; */
+  width: 6em;
+  height: 2em;
+  font-size: 1em;
+}
+
+/* #accountLogin .password{
   margin-top: 1em;
   margin-bottom: 1em;
   border: 1px solid #333;
 }
 
-#accountLogin .password{
+#accountLogin .signup .login{
   margin-top: 1em;
   margin-bottom: 1em;
   border: 1px solid #333;
-}
+} */
+
 
 
 
