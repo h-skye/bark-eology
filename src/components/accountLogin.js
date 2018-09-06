@@ -11,7 +11,22 @@ import {
 class accountLogin extends React.Component {
     constructor(props) {
         super(props);
+        this.loginInfo = this.loginInfo.bind(this);
+        this.redirectSignUp = this.redirectSignUp.bind(this);
     }
+
+    loginInfo(e) {
+        e.preventDefault();
+        console.log('my event is ', e)
+
+        const username = e.target.elements.username.value
+        const password = e.target.elements.password.value
+        // const dogBreed = e.target.elements.dogBreed.value
+
+        console.log('what is my username', username)
+        console.log('what is my password', password)
+        // console.log('what is my dogBreed', dogBreed);
+    } 
 
     redirectSignUp = () => {
         this.props.history.push("/signup");
@@ -19,26 +34,13 @@ class accountLogin extends React.Component {
 
     render() {
 
-        const loginInfo = (e) => {
-            e.preventDefault();
-            console.log('my event is ', e)
-    
-            const username = e.target.elements.username.value
-            const password = e.target.elements.password.value
-            // const dogBreed = e.target.elements.dogBreed.value
-    
-            console.log('what is my username', username)
-            console.log('what is my password', password)
-            // console.log('what is my dogBreed', dogBreed);
-        } 
-
         return (
-            <form id="accountLogin" onSubmit={loginInfo}>
+            <form id="accountLogin" onSubmit={this.loginInfo}>
                 <input type="text" name="username" class="username" placeholder="Username" />
                 <input type="text" name="password" class="password" placeholder="Password" />
                 <br />
                 <button className="login">Login</button>
-                <button className="signup" onClick={() => this.redirectSignUp()}> New User? </button>
+                <button type="button" className="signup" onClick={() => this.redirectSignUp()}> New User? </button>
             </form>
         )
     }
