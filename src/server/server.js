@@ -5,11 +5,16 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const app = express();
 
+const fetchPromise = require('es6-promise').polyfill();
+const fetch = require('isomorphic-fetch');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, './../../dist')));
+
+
 
 app.listen(3000, (err) => {
 	if (err) console.log('Error in server starting', err);

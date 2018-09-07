@@ -19,7 +19,7 @@ class signupPage extends React.Component {
     }
     signupInfo(e) {
         e.preventDefault();
-        const data = new FormData (event.target);
+        const data = new FormData(event.target);
 
         console.log('my data is', data);
 
