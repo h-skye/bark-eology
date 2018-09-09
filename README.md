@@ -15,23 +15,30 @@ This project is intended to create a user friendly responsive web page to find o
 Fork and download this repository to be used.
 
 Create a database to be used. Here my credentials are displayed to connect to Postgres client on the backend.
+
 Under db.js in db, you can modify your credentials to reflect as appropriately.
+
 'user' : 'your computer username'
+
 'database': 'the databasename chosen for postgres' => I have picked pet_users
+
 You may setup a password as well. I have not on my own end but left it up there for configuration.
+
 Postgres's own port is defaulted to 5432.
+
+Use psql "databasename" without the quotation marks on another terminal.
 
 
 ## Installation
 
 Start the local host server in the directory of the repository downloaded.
 
-Start building the files to be served on your local host
+On another terminal, start building the files to be served on your local host
 ```
 npm run build
 ```
 
-Start the server on your local host on port 3000
+On a separate terminal, start the server on your local host on port 3000
 ```
 npm start
 ```
