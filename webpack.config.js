@@ -1,7 +1,7 @@
 const path = require('path');
 
 const entry = [
-	'./src/index.js'
+	'whatwg-fetch', './src/index.js'
 ];
 
 const output = {

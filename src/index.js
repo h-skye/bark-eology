@@ -10,6 +10,7 @@ import {
 
 import accountLogin from './components/accountLogin'
 import signupPage from './components/signupPage';
+import userPage from './components/userPage';
 
 class App extends React.Component {
 
@@ -34,6 +35,7 @@ class App extends React.Component {
                 <div>
                     <Route exact path="/" component={accountLogin} />
                     <Route path="/signup" component={signupPage} />
+                    <Route path="/userPage" component={userPage} />
                 </div>
             </Router>
         )

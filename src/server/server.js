@@ -7,6 +7,14 @@ const app = express();
 
 const fetchPromise = require('es6-promise').polyfill();
 const fetch = require('isomorphic-fetch');
+const dbController = require('./../../db/dbController.js');
+const server = require('./serverRouting.js');
+
+app.use(function(req, res, next) { 
+	res.header('Access-Control-Allow-Origin', '*'); 
+	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept'); 
+	next(); 
+});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -14,6 +22,7 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, './../../dist')));
 
+app.post('/signup', dbController.createTable, server.verifyUser);
 
 
 app.listen(3000, (err) => {

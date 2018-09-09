@@ -19,9 +19,9 @@ class signupPage extends React.Component {
     }
     signupInfo(e) {
         e.preventDefault();
-        const data = new FormData(event.target);
+        const form = document.querySelector('form');
 
-        console.log('my data is', data);
+        console.log('my data is', form);
 
         const username = e.target.elements.username.value.trim();
         const password = e.target.elements.password.value.trim();
@@ -33,7 +33,7 @@ class signupPage extends React.Component {
         const dogBday = e.target.elements.dogBday.value;
         const dogBreed = e.target.elements.dogBreed.value;
 
-        console.log(e.target.elements.username.value)
+        console.log(e.target.elements.username.value.trim())
         console.log(e.target.elements.password.value)
         console.log(e.target.elements.firstName.value)
         console.log(e.target.elements.lastName.value)
@@ -42,6 +42,26 @@ class signupPage extends React.Component {
         console.log(e.target.elements.dogBday.value)
         console.log(e.target.elements.dogBreed.value)
 
+        fetch('/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                username: username,
+                password: password,
+                email: email,
+                firstname: firstName,
+                lastname: lastName,
+                dogs: {
+                    1: {
+                        dogname: dogName,
+                        dogbday: dogBday,
+                        breed: dogBreed
+                    } 
+                }
+            })
+        }).then((response) => console.log(response)); 
 
     }
 
