@@ -22,7 +22,15 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, './../../dist')));
 
-app.post('/signup', dbController.createTable, server.verifyUser);
+app.post('/signup', dbController.createTable, dbController.verifyUser, dbController.createUser, (err, res) => {
+	if (res.locals.doesExist === false) {
+		alert('User created!');
+		res.redirect('/');
+	} else {
+		alert('User already exists! Please login');
+		res.redirect('/');
+	}
+});
 
 
 app.listen(3000, (err) => {
