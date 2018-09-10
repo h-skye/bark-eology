@@ -52,12 +52,12 @@ Having a pet is not a mandatory field as there are prospective owners, and for o
 
 ## Screenshots of database users
 
-Screenshots are showing object queries as text [] instead of jsbonb
+Screenshots are showing object queries as json
 
-Shows the current database user below with pet added
+Shows the current database setup
 <img src="./ss/ss1_petusersDB.png">
 
-Shows the current database users below with a no pet user added
+Shows the current database users below with one with pet, and one with no pet
 <img src="./ss/ss2_nopetuser.png">
 
 ## Bugs To Fix
