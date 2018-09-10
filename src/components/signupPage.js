@@ -15,7 +15,7 @@ import {
 class signupPage extends React.Component {
     constructor(props) {
         super(props)
-        // this.signupInfo = this.signupInfo.bind(this);
+        this.redirectLogin = this.redirectLogin.bind(this);
     }
     signupInfo(e) {
         e.preventDefault();
@@ -30,8 +30,8 @@ class signupPage extends React.Component {
         const lastName =  e.target.elements.lastName.value.trim();
 
         const dogName = e.target.elements.dogName.value.trim();
-        const dogBday = e.target.elements.dogBday.value;
-        const dogBreed = e.target.elements.dogBreed.value;
+        const dogBday = e.target.elements.dogBday.value || '' ;
+        const dogBreed = e.target.elements.dogBreed.value || '';
 
         console.log(e.target.elements.username.value.trim())
         console.log(e.target.elements.password.value)
@@ -65,6 +65,10 @@ class signupPage extends React.Component {
 
     }
 
+    redirectLogin = () => {
+        this.props.history.push("/");
+    }
+
     render() {
 
 
@@ -86,6 +90,7 @@ class signupPage extends React.Component {
                     <br />
                     {/* <button className="addPetInfo">Add Pet Info</button> */}
                     <button className="signup"> Sign Up! </button>
+                    <button type="button" className="backLogin" onClick={() => this.redirectLogin()}> Login </button>
                 </form>
 
         )

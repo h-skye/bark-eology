@@ -30,7 +30,7 @@
     font-size: 1em;
 } 
 
-#signup .addPetInfo, .signup {
+#signup .signup, .backLogin {
     width: 8em;
     height: 2em;
     font-size: 1em;

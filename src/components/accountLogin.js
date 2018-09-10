@@ -39,7 +39,7 @@ class accountLogin extends React.Component {
                 <input type="text" name="username" class="username" placeholder="Username" />
                 <input type="text" name="password" class="password" placeholder="Password" />
                 <br />
-                <button className="login">Login</button>
+                <button className="login"> Login </button>
                 <button type="button" className="signup" onClick={() => this.redirectSignUp()}> New User? </button>
             </form>
         )
