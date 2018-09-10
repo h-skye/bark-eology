@@ -17,15 +17,20 @@ class accountLogin extends React.Component {
 
     loginInfo(e) {
         e.preventDefault();
-        console.log('my event is ', e)
 
         const username = e.target.elements.username.value
         const password = e.target.elements.password.value
         // const dogBreed = e.target.elements.dogBreed.value
-
-        console.log('what is my username', username)
-        console.log('what is my password', password)
-        // console.log('what is my dogBreed', dogBreed);
+        fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                username: username,
+                password: password,
+            })
+        }).then((response) => console.log(response)); 
     } 
 
     redirectSignUp = () => {

@@ -23,10 +23,24 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, './../../dist')));
 
 app.post('/signup', dbController.createTable, dbController.verifyUser, dbController.createUser, (err, res) => {
-	if (res.locals.doesExist === false) {
+	// console.log('am i hitting next?');
+	if (res.locals.doesExist === true) {
 		res.redirect('/');
+	} else if (res.locals.doesExist === false) { 
+		res.send('User created! You may login now');
 	} else {
-		res.redirect('/');
+		console.log('error in creating user in DB', err);
+	}
+});
+
+app.post('/login', dbController.verifyUser, (err, res) => {
+	console.log('hitting login page');
+	if (res.locals.doesExist === true) {
+		res.redirect('/userPage');
+	} else if (res.locals.doesExist === false) {
+		res.send('Create a new user!');
+	} else {
+		console.log('error login in!', err);
 	}
 });
 

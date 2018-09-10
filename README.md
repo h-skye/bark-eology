@@ -60,7 +60,9 @@ Shows the current database user below with pet added
 Shows the current database users below with a no pet user added
 <img src="./ss/ss2_nopetuser.png">
 
-
+## Bugs To Fix
+The redirect portion works on the backend but the client side needs to change for React and will be updated first before any features are implemented.
+Client side re-rendering to login will be fixed as well. 
 
 ## Features to be built
 A card interface for each different types of breeds and a modal type popup for users to easily view and browse.
