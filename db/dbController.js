@@ -6,7 +6,7 @@ dbController.createTable = ((req, res, next) => {
 	// console.log('request body in create table', req.body);
 
 	return db.query(`CREATE TABLE IF NOT EXISTS pet_users (username VARCHAR(20) PRIMARY KEY, 
-	password VARCHAR(20) NOT NULL, email VARCHAR(50) NOT NULL, firstName VARCHAR(20) NOT NULL, lastName VARCHAR(20) NOT NULL, dogs TEXT[])`, 
+	password VARCHAR(20) NOT NULL, email VARCHAR(50) NOT NULL, firstName VARCHAR(20) NOT NULL, lastName VARCHAR(20) NOT NULL, dogs JSONB)`, 
 	(err, res) => {
 		if (err) {
 			console.log('error in creating table', err);
@@ -50,11 +50,12 @@ dbController.createUser = ((req, res, next) => {
 
 	const query = `INSERT INTO pet_users (username, password, email, firstname, lastname, dogs)
 	VALUES ('${req.body.username}', '${req.body.password}', '${req.body.email}', '${req.body.firstname}', '${req.body.lastname}',
-	'{${req.body.dogs}}')`;
+	'${req.body.dogs}')`;
 
 	return db.query(query, (err, res) => {
 		if (err) {
 			console.log('error in adding user to DB', err);
+			next();
 		}
 		else {
 			console.log('success in adding user to DB!', res);

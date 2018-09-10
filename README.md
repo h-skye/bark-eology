@@ -50,6 +50,17 @@ Postgres usernames are unique. The mandatory fields in PSQL are currently userna
 Having a pet is not a mandatory field as there are prospective owners, and for owners with multiple pets will be stored as an object.
 
 
+## Screenshots of database users
+
+Screenshots are showing object queries as text [] instead of jsbonb
+
+Shows the current database user below with pet added
+<img src="./ss/ss1_petusersDB.png">
+
+Shows the current database users below with a no pet user added
+<img src="./ss/ss2_nopetuser.png">
+
+
 
 ## Features to be built
 A card interface for each different types of breeds and a modal type popup for users to easily view and browse.
